@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Pixelout";
-    src: url("/fonts/Pixelout.ttf") format("truetype");
+    src: url("../css/fonts/Pixelout.ttf");
 }
 @font-face {
     font-family: "Daydream";
-    src: url("/fonts/Daydream-DEMO.otf") format("opentype");
+    src: url("../css/fonts/Daydream-DEMO.otf");
 }
 
 .screen {

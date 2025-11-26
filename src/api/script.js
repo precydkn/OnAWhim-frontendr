@@ -1,7 +1,9 @@
+const BACKEND_URL = "https://onawhim-backend-kli7.onrender.com";
+
 //---login function---
 export const loginUser = async (email, password) => {
     try {
-        const response = await fetch('https://onawhim-backend.onrender.com/login', {
+        const response = await fetch(`${BACKEND_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -18,7 +20,7 @@ export const loginUser = async (email, password) => {
 //---signup function---
 export const signupUser = async (email, password) => {
     try {
-        const response = await fetch('https://onawhim-backend.onrender.com/users', {
+        const response = await fetch(`${BACKEND_URL}/users`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password }),

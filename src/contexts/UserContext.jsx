@@ -5,6 +5,7 @@ export const UserContext = createContext();
 
 // provider component
 export const UserProvider = ({ children }) => {
+    const BACKEND_URL = "https://onawhim-backend-kli7.onrender.com";
     const [user, setUser] = useState(null); // null = not logged in
     const [activities, setActivities] = useState([]);
 
@@ -26,7 +27,7 @@ export const UserProvider = ({ children }) => {
             setUser(userData);
 
             try {
-                const res = await fetch(`https://onawhim-backend.onrender.com/activities`, {
+                const res = await fetch(`${BACKEND_URL}/activities`, {
                     headers: { 
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${userData.token}`
@@ -61,7 +62,7 @@ export const UserProvider = ({ children }) => {
         localStorage.setItem('user', JSON.stringify(userData));
 
         try {
-            const res = await fetch(`https://onawhim-backend.onrender.com/activities`, {
+            const res = await fetch(`${BACKEND_URL}/activities`, {
                 headers: { 
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${userData.token}`
@@ -106,7 +107,7 @@ export const UserProvider = ({ children }) => {
         }
 
         try {
-            const res = await fetch(`https://onawhim-backend.onrender.com/activities`, {
+            const res = await fetch(`${BACKEND_URL}/activities`, {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
@@ -145,7 +146,7 @@ export const UserProvider = ({ children }) => {
         const newStatus = activity.status === "undone" ? "done" : "undone";
 
         try {
-            const res = await fetch(`https://onawhim-backend.onrender.com/activities/${id}`, {
+            const res = await fetch(`${BACKEND_URL}/activities/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -173,7 +174,7 @@ export const UserProvider = ({ children }) => {
     // func: delete an activity
     const deleteActivity = async (id) => {
         try {
-            const res = await fetch(`https://onawhim-backend.onrender.com/activities/${id}`, {
+            const res = await fetch(`${BACKEND_URL}/activities/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -202,7 +203,7 @@ export const UserProvider = ({ children }) => {
         if (!user) return;
 
         try {
-            const res = await fetch(`https://onawhim-backend.onrender.com/users/${userId}`, {
+            const res = await fetch(`${BACKEND_URL}/users/${userId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

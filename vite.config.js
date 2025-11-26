@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/onawhim/',
   plugins: [react()],
+  base: "/", // ensures paths work on render
 })

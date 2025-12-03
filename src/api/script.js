@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://onawhim-backend-kli7.onrender.com";
+const BACKEND_URL = process.env.BACKEND_URL; // oaw render backend
 
 //---login function---
 export const loginUser = async (email, password) => {

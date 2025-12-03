@@ -5,7 +5,7 @@ export const UserContext = createContext();
 
 // provider component
 export const UserProvider = ({ children }) => {
-    const BACKEND_URL = "https://onawhim-backend-kli7.onrender.com";
+    const BACKEND_URL = process.env.BACKEND_URL; // oaw render backend
     const [user, setUser] = useState(null); // null = not logged in
     const [activities, setActivities] = useState([]);
 

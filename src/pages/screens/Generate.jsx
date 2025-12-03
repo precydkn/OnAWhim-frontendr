@@ -44,7 +44,7 @@ function Generate() {
         setScreen("loading"); // display loading screen
 
         // fetch activity from api
-        fetch(`${BACKEND_URL}api/activity?type=${actType}`)
+        fetch(`${BACKEND_URL}/api/activity?type=${actType}`)
         .then(res => res.json())
         .then(data => {
             const generatedAct= data[Math.floor(Math.random() * data.length)]?.activity;

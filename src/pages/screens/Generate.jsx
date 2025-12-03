@@ -7,6 +7,7 @@ import '../../css/ReturnBtn.css'
 import ReturnBtn from '../../components/ReturnBtn'
 
 function Generate() {
+    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL; // oaw render backend
     const { addActivity, user } = useContext(UserContext); // retrieve functions related to user
     
     // for backbtn redirecting
@@ -43,7 +44,7 @@ function Generate() {
         setScreen("loading"); // display loading screen
 
         // fetch activity from api
-        fetch(`https://onawhim-backend.onrender.com/api/activity?type=${actType}`)
+        fetch(`${BACKEND_URL}api/activity?type=${actType}`)
         .then(res => res.json())
         .then(data => {
             const generatedAct= data[Math.floor(Math.random() * data.length)]?.activity;

@@ -5,6 +5,7 @@ export const UserContext = createContext();
 
 // provider component
 export const UserProvider = ({ children }) => {
+    console.log("VITE_BACKEND_URL =", import.meta.env.VITE_BACKEND_URL);
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL; // oaw render backend
     const [user, setUser] = useState(null); // null = not logged in
     const [activities, setActivities] = useState([]);

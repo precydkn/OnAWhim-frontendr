@@ -1,4 +1,4 @@
-const BACKEND_URL = process.env.BACKEND_URL; // oaw render backend
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL; // oaw render backend
 
 //---login function---
 export const loginUser = async (email, password) => {

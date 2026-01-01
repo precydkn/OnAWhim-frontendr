@@ -1,4 +1,3 @@
-console.log("VITE_BACKEND_URL =", import.meta.env.VITE_BACKEND_URL);
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL; // oaw render backend
 
 //---login function---

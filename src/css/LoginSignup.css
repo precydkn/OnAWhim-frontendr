@@ -41,7 +41,7 @@
     color: #7B846B;
 }
 
-/*---input---*/
+/*---input boxes---*/
 .form-container #loginForm input, 
 .form-container #signupForm input {
     padding: 7px;
@@ -68,7 +68,9 @@
 .form-container #signupForm input:is(:-webkit-autofill, :autofill) {
     color: #24371B;
 }
-/*---*/
+.form-container #loginForm input {
+    padding-right: 35px;
+}
 
 /*---input, textarea, select autofill styles*/
 .form-container input:-webkit-autofill:hover,
@@ -88,6 +90,9 @@
     -webkit-box-shadow: 0 0 0px 1000px rgb(123, 132, 107) inset;
     background-color: transparent;
 }
+#loginForm:focus-within .password-icon {
+    color: #7B846B;
+}
 
 /*---show password btn---*/
 .form-container #loginForm .show-password-btn,
@@ -97,9 +102,22 @@
     top: 205px;
     border: none;
 }
+.form-container #loginForm .show-password-btn .key {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+}
+.form-container #loginForm .show-password-btn .lock {
+    position: absolute;
+    right: 7px;
+    top: 5px;
+}
 .form-container #loginForm .show-password-btn:hover,
 .form-container #signupForm .show-password-btn:hover {
     background-color: transparent;
+}
+.show-password-btn:hover .password-icon {
+    color: #24371B;
 }
 
 /*---toggle btn---*/

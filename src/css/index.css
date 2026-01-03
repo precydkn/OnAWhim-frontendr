@@ -7,6 +7,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ensure proper layout for other devices */
+html, body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: pan-x pan-y;
+}
+/*---*/
+
 body, h1, h2, p {
   margin: 0;
   padding: 0;

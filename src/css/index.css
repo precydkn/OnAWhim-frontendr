@@ -28,6 +28,11 @@ body {
   overflow: hidden;
 }
 
+/* make images undraggable */
+body img {
+  -webkit-user-drag: none;
+}
+
 /* page highlight style */
 ::selection {
   background: gray;

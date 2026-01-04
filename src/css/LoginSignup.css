@@ -102,12 +102,14 @@
     top: 205px;
     border: none;
 }
-.form-container #loginForm .show-password-btn .key {
+.form-container #loginForm .show-password-btn .key,
+.form-container #signupForm .show-password-btn .key {
     position: absolute;
     right: 5px;
     top: 4px;
 }
-.form-container #loginForm .show-password-btn .lock {
+.form-container #loginForm .show-password-btn .lock,
+.form-container #signupForm .show-password-btn .lock {
     position: absolute;
     right: 7px;
     top: 5px;

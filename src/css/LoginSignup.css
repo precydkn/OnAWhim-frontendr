@@ -68,7 +68,8 @@
 .form-container #signupForm input:is(:-webkit-autofill, :autofill) {
     color: #24371B;
 }
-.form-container #loginForm input {
+.form-container #loginForm input,
+.form-container #signupForm input {
     padding-right: 35px;
 }
 
@@ -90,7 +91,8 @@
     -webkit-box-shadow: 0 0 0px 1000px rgb(123, 132, 107) inset;
     background-color: transparent;
 }
-#loginForm:focus-within .password-icon {
+#loginForm:focus-within .password-icon,
+#signupForm:focus-within .password-icon {
     color: #7B846B;
 }
 

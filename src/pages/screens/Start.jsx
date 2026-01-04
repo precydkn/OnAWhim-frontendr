@@ -31,13 +31,14 @@ function Start() {
     /*---*/
 
     return <div className="screen">
-        {showTitle && !displayStart && <TitleScreen htext="On A Whim" />} {/* display titlescreen every first load of page */}
+        {showTitle && !displayStart && <TitleScreen htext="On A Whim" h2text="Start" c2="user" />} {/* display titlescreen every first load of page */}
 
         {/* dont display titlescreen after */}
         {displayStart && (
             <div className="Start">
                 <div className="h">
                     <h1>On A Whim</h1>
+                    <h2>Start</h2>
                 </div>
                 <div className="nav">
                     <NavBtn link_to="/start/about" navbtn_name="About" />

@@ -1,6 +1,7 @@
 .root-wrapper {
     /* border: 2px white solid; */
-    --bg-url: url('https://i.postimg.cc/fbhw6hzJ/bg-home-2.png'); /* default bg; made a variable so we can access/change in js */
+    --bg-dim: 1; /* normal brightness; made a variable so we can access/change in js */
+
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -10,6 +11,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--bg-url) center no-repeat;
+    background: url('https://i.postimg.cc/fbhw6hzJ/bg-home-2.png') center no-repeat;
     background-size: cover;
+    filter: brightness(var(--bg-dim));
+    transition: filter 0.3s ease;
 }

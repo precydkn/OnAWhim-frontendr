@@ -1,46 +1,35 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
-function GameCard({
-    cn, link_to, default_src, alt_name,
-    hover_src, dimmed_src,
-    bg_default, bg_hover, setBackground,
-    hoveredCard, setHoveredCard
+function GameCard({ 
+    cn, link_to, 
+    default_src, hover_src, 
+    alt_name, hoveredCard, 
+    setHoveredCard, setBackground 
 }) {
-    const [isHoveringSelf, setIsHoveringSelf] = useState(false); // for gamecards hovering
 
-    let imgToShow = default_src; // for setting which image should be shown currently
-
-    // setting images on hover
-    if (isHoveringSelf) {
-        imgToShow = hover_src;
-    } else if (hoveredCard && hoveredCard !== cn) {
-        imgToShow = dimmed_src;
-    }
+    const isActive = hoveredCard === cn; // for card hovered on
+    const isDimmed = hoveredCard && hoveredCard !== cn; // for card not hovered on while other card is hovered on
+    
+    const imgSrc = isActive ? hover_src : default_src; // to change card image on hover
 
     return <div
-        className={cn}
+        className={`${cn} ${isActive ? "is-active" : ""} ${isDimmed ? "is-dimmed" : ""}`}
         onMouseEnter={() => {
-            setIsHoveringSelf(true);
             setHoveredCard(cn);
-            setBackground(bg_hover);
+            setBackground(true);
         }}
         onMouseLeave={() => {
-            setIsHoveringSelf(false);
             setHoveredCard(null);
-            setBackground(bg_default);
+            setBackground(false);
         }}
         onClick={() => {
-            setIsHoveringSelf(false);
             setHoveredCard(null);
-            setBackground(bg_default)
+            setBackground(false);
         }}
     >
         <Link to={link_to}>
-            <img
-                src={imgToShow}
-                alt={alt_name}
-            />
+            <img src={imgSrc} alt={alt_name} />
         </Link>
     </div>
 }

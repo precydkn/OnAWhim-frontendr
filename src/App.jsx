@@ -9,9 +9,9 @@ function App() {
   const wrapperRef = useRef(null);
 
   // function passed to children to update bg
-  const setBackground = (imgURL) => {
+  const setBackground = (dimmed = false) => {
     if (wrapperRef.current) {
-      wrapperRef.current.style.setProperty("--bg-url", `url('${imgURL}')`);
+      wrapperRef.current.style.setProperty("--bg-dim", dimmed ? "0.45" : "1");
     }
   }
 

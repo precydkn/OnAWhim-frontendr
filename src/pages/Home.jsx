@@ -69,11 +69,6 @@ function Home({ setBackground }) {
                 default_src="https://i.postimg.cc/vHqhqQvh/gamecard-acc.png"
                 hover_src="https://i.postimg.cc/fT2C2wv5/gamecard-f-acc.png"
 
-                dimmed_src="https://i.postimg.cc/BQYpYqCc/gamecard-dimmed-acc.png"
-
-                bg_default="https://i.postimg.cc/fbhw6hzJ/bg-home-2.png"
-                bg_hover="https://i.postimg.cc/C1jVTwH1/bg-home-dimmed.png"
-
                 setBackground={setBackground}
                 hoveredCard={hoveredCard}
                 setHoveredCard={setHoveredCard}
@@ -84,18 +79,15 @@ function Home({ setBackground }) {
             <GameCard
                 cn="gamecard-oaw"
                 link_to="/start"
-                default_src="https://i.postimg.cc/jdgcgshM/gamecard-oaw.png"
-                hover_src="https://i.postimg.cc/02WnW8Ct/gamecard-f-oaw.png"
-
-                dimmed_src="https://i.postimg.cc/9F8b8WBY/gamecard-dimmed-oaw.png"
+                default_src="https://i.postimg.cc/QMHv4KMW/gamecard-oaw.png"
+                hover_src="https://i.postimg.cc/25s90HJh/gamecard-f-oaw.png"
 
                 bg_default="https://i.postimg.cc/fbhw6hzJ/bg-home-2.png"
-                bg_hover="https://i.postimg.cc/C1jVTwH1/bg-home-dimmed.png"
 
                 setBackground={setBackground}
                 hoveredCard={hoveredCard}
                 setHoveredCard={setHoveredCard}
-                alt_name="on a whim gamecard"
+                alt_name="start gamecard"
             />
 
             {/* mobile version */}
@@ -108,10 +100,7 @@ function Home({ setBackground }) {
                         default_src="https://i.postimg.cc/vHqhqQvh/gamecard-acc.png"
                         hover_src="https://i.postimg.cc/fT2C2wv5/gamecard-f-acc.png"
 
-                        dimmed_src="https://i.postimg.cc/BQYpYqCc/gamecard-dimmed-acc.png"
-
                         bg_default="https://i.postimg.cc/fbhw6hzJ/bg-home-2.png"
-                        bg_hover="https://i.postimg.cc/C1jVTwH1/bg-home-dimmed.png"
 
                         setBackground={setBackground}
                         hoveredCard={hoveredCard}
@@ -121,18 +110,15 @@ function Home({ setBackground }) {
                     <GameCard
                         cn="gamecard-oaw mobile"
                         link_to="/start"
-                        default_src="https://i.postimg.cc/jdgcgshM/gamecard-oaw.png"
-                        hover_src="https://i.postimg.cc/02WnW8Ct/gamecard-f-oaw.png"
-
-                        dimmed_src="https://i.postimg.cc/9F8b8WBY/gamecard-dimmed-oaw.png"
-
+                        default_src="https://i.postimg.cc/QMHv4KMW/gamecard-oaw.png"
+                        hover_src="https://i.postimg.cc/25s90HJh/gamecard-f-oaw.png"
+                        
                         bg_default="https://i.postimg.cc/fbhw6hzJ/bg-home-2.png"
-                        bg_hover="https://i.postimg.cc/C1jVTwH1/bg-home-dimmed.png"
 
                         setBackground={setBackground}
                         hoveredCard={hoveredCard}
                         setHoveredCard={setHoveredCard}
-                        alt_name="on a whim gamecard"
+                        alt_name="start gamecard"
                     />
                 </div>
             )}

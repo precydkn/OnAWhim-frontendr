@@ -29,11 +29,13 @@
     animation: blink 1.5s infinite;
 }
 
-.Home .screen .hover-acc h1, .Home .screen .hover-oaw h1 {
+.Home .screen .hover-acc h1, 
+.Home .screen .hover-oaw h1 {
     margin: 50px 0 -10px;
     font-size: 70px;
 }
-.Home .screen .hover-acc h1.h1-2, .Home .screen .hover-oaw h1.h1-2 {
+.Home .screen .hover-acc h1.h1-2, 
+.Home .screen .hover-oaw h1.h1-2 {
     margin: 0 0 20px;
     font-family: 'Daydream';
     font-size: 40px;
@@ -74,11 +76,19 @@
     height: max-content;
     transition: width 0.2s;
 }
-.gamecard-acc img, .gamecard-oaw img {
+.gamecard-acc img, 
+.gamecard-oaw img {
     width: 100%;
     pointer-events: all;
     user-select: auto;
+    transition: filter 0.25s ease, transform 0.25s ease;
 }
+/* dimmed cards */
+.gamecard-acc.is-dimmed img,
+.gamecard-oaw.is-dimmed img {
+    filter: brightness(0.4);
+}
+
 .gamecard-acc:hover, .gamecard-oaw:hover {
     width: 650px;
 }

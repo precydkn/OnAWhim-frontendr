@@ -1,8 +1,72 @@
+@font-face {
+    font-family: "Daydream";
+    src: url("../css/fonts/Daydream-DEMO.otf");
+}
+
 .Home {
     position: relative;
     width: 100vw;
     height: 100vh;
 }
+
+.Home .screen img {
+    mix-blend-mode: overlay;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.Home .screen h1 {
+    font-family: 'Pixelout';
+    font-size: 80px;
+    margin: 90px 0 30px;
+}
+.Home .screen p {
+    margin: 15px 10px;
+}
+.pblink {
+    animation: blink 1.5s infinite;
+}
+
+.Home .screen .hover-acc h1, .Home .screen .hover-oaw h1 {
+    margin: 50px 0 -10px;
+    font-size: 70px;
+}
+.Home .screen .hover-acc h1.h1-2, .Home .screen .hover-oaw h1.h1-2 {
+    margin: 0 0 20px;
+    font-family: 'Daydream';
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #24371B;
+}
+
+/* subtext animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*---smooth screen change on gamecard hover---*/
+.Home .screen {
+    position: relative;
+}
+.Home .screen > div {
+    position: absolute;
+    inset: 0;
+}
+.Home .screen > div {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.screen.is-idle .titlescreen,
+.screen.is-acc .hover-acc,
+.screen.is-oaw .hover-oaw {
+    opacity: 1;
+}
+/*---*/
 
 .gamecard-acc, .gamecard-oaw {
     position: absolute;
@@ -12,6 +76,8 @@
 }
 .gamecard-acc img, .gamecard-oaw img {
     width: 100%;
+    pointer-events: all;
+    user-select: auto;
 }
 .gamecard-acc:hover, .gamecard-oaw:hover {
     width: 650px;

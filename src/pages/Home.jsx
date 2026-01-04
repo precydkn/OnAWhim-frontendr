@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../css/main-wrapper.css'
 import '../css/Home.css'
+import '../css/screens.css'
 import GameCard from "../components/GameCard"
 
 function Home({ setBackground }) {
@@ -33,6 +34,34 @@ function Home({ setBackground }) {
 
     return <div className="Home">
         <div className="main-wrapper">
+            <div
+                className={`screen ${
+                    hoveredCard === "gamecard-acc"
+                    ? "is-acc"
+                    : hoveredCard === "gamecard-oaw"
+                    ? "is-oaw"
+                    : "is-idle"
+                }`}
+            >
+                <img src="https://i.postimg.cc/9fZGgsLP/bg_titlescreen.png" alt="" />
+                <div className="titlescreen">
+                    <h1>On A Whim</h1>
+                    <p className='pblink'>Select a game card to start</p>
+                </div>
+
+                <div className="hover-acc">
+                    <h1>On A<br />Whim</h1>
+                    <h1 className="h1-2">User</h1>
+                    <p>Manage your account and your activities list!</p>
+                </div>
+
+                <div className="hover-oaw">
+                    <h1>On A<br />Whim</h1>
+                    <h1 className="h1-2">Start</h1>
+                    <p>Know what On A Whim is about and start generating activities!</p>
+                </div>
+            </div>
+
             {/* directs to user account */}
             <GameCard
                 cn="gamecard-acc"

@@ -22,11 +22,13 @@ function Activities() {
 
     // filter activities based on filter state
     const filteredActs = activities.filter(act => {
-        if (filter === "all") return true;
-        if (filter === "undone") return act.status === "undone";
-        if (filter === "done") return act.status === "done";
+        switch (filter) {
+            case "all": return true;
+            case "undone": return act.status === "undone";
+            case "done": return act.status === "done";
+        }
         return true;
-    })
+    });
 
     return <div className="screen">
         <div className="Activities">

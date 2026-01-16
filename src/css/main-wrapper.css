@@ -43,12 +43,7 @@
         /* transform: translate(-50%, -44%) scale(calc(var(--base-scale) * var(--zoom))); */
     }
     .main-wrapper.zoomed {
-        --zoom: 3;
-        --y-shift: 950px;
-        /* if .main-wrapper bg-size: cover
-        --zoom: 1.7;
-        --y-shift: 900px;*/
-        /* --zoom: 4;
-        --y-shift: 1250px; */
+        --zoom: 4.5;
+        --y-shift: 1500px;
     } 
 }

@@ -122,6 +122,13 @@
         background-size: cover;
     }
 
+    .Home .screen {
+        position: absolute;
+        top: 124px;
+        left: 330px;
+        zoom: 1.8;
+    }
+
     .gamecard-acc,
     .gamecard-oaw {
         display: none;
@@ -130,17 +137,15 @@
     .gamecards-mobile-container {
         background-color: #262626;
         border-radius: 50px;
-        /* margin: 0 auto; */
-        /* margin-top: -300px; */
-        /* width: 1500px; */
-        /* height: 1000px; */
-        width: 1500px;
-        height: 2000px;
+        width: 70%;
+        height: 100%;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         gap: 30px;
+        z-index: 3;
+        position: relative;
     }
 
     .close-gcMobile-btn {
@@ -148,7 +153,7 @@
         color: gray;
         position: absolute;
         top: 0;
-        right: 300px;
+        right: 50px;
     }
 
     .gamecards-mobile-container .gamecard-acc.mobile,

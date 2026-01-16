@@ -40,7 +40,6 @@
         /* border: 3px dashed orange; */
         height: 1920px;
         transform: translate(-50%, calc(-57% + (var(--y-shift) * var(--base-scale)))) scale(calc(var(--base-scale) * var(--zoom)));
-        /* transform: translate(-50%, -44%) scale(calc(var(--base-scale) * var(--zoom))); */
     }
     .main-wrapper.zoomed {
         --zoom: 4.5;
